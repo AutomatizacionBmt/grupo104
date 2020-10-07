@@ -29,6 +29,12 @@ public class CalificadorPrestamo {
             System.out.println("Lo Siento!, usted no ha aplicado al prestamo, se requiere un salario " +
                     "minimo de " + montoMinimo + " y un periodo de trabajo minimo de " + periodoTrabajoMinimo + " años") ;
         }
+
+        int contador = 1;
+        while(contador <= 10) {
+            System.out.println(contador);
+            contador = contador + 1;
+        }
     }
 
     /*
