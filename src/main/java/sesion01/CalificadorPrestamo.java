@@ -31,6 +31,9 @@ public class CalificadorPrestamo {
         }
     }
 
+    /*
+     * Este fragmento de codigo verifica que un empleado esta calificado para un prestamo
+     */
     public static boolean estaCalificadoAlPrestamo(double sueldo, int periodoTrabajoActual) {
         /* boolean resultado = false;
 
