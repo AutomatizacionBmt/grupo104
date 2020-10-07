@@ -9,6 +9,18 @@ public class EjemploString {
         System.out.println(nombre);
         System.out.println(nombre2);
 
+        if (5> 3 && 3<4) {
+            System.out.println("has aplicado el operador && (AND)");
+        }
+
+        if (2> 3 || 3<4) {
+            System.out.println("has aplicado el operador || (OR)");
+        }
+
+        if (!(2>3)) {
+            System.out.println("Aqui estoy negando");
+        }
+
         if (nombre.equalsIgnoreCase(nombre2)) {
             System.out.println("Son tocayos");
         }
