@@ -36,5 +36,14 @@ public class SumaNumeros {
 
         } while(continuar);
 
+        int count = 1;
+        while(count < 10) {
+            System.out.println(count);
+            if(count == 3) {
+                break;
+            }
+            count++;
+        }
+
     }
 }
