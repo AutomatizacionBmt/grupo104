@@ -30,6 +30,10 @@ public class SumaNumeros {
             System.out.println("¿Desea continuar? true or false");
             continuar = scanner.nextBoolean();
 
+            if (!continuar) {
+                System.out.println("Gracias por usar nuestra calculadora");
+            }
+
         } while(continuar);
 
     }
