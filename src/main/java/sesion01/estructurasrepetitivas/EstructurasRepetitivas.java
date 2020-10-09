@@ -62,6 +62,5 @@ public class EstructurasRepetitivas {
                     System.out.println("opcion invalidad");
             }
         } while(opcion != 0);
-
     }
 }
