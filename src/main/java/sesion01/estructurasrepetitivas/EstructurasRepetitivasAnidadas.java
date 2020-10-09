@@ -10,7 +10,7 @@ public class EstructurasRepetitivasAnidadas {
                int count = 0;
                while(count < 2) {
                    System.out.println(count);
-                   count++;
+                   count++; // count = count +1;
                }
            }
         }
