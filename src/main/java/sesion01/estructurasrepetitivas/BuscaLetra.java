@@ -10,11 +10,15 @@ public class BuscaLetra {
         System.out.println("Ingrese un texto");
         String texto = scanner.next(); // Giancarlo -> 9
 
+        //g i a n c a r l o
+        //0 1 2 3 4 5 6 7 8
+        // Alexander Gimenez (17)
+        // 0........16
         boolean letraEncontrada = false;
         int posicionEncontrada = -1;
 
-        for(int i = 0; i < texto.length(); i++) { // i va de 0 hasta 8
-            char letraActual = texto.charAt(i);
+        for(int i = 0; i < texto.length(); i++) { // i va de 0 hasta 16
+            char letraActual = texto.charAt(i); // obtener el caracter de la posicion i
             if (letraActual == 'A' || letraActual == 'a') {
                 posicionEncontrada = i;
                 letraEncontrada = true;
