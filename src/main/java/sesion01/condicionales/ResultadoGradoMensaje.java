@@ -12,7 +12,7 @@ public class ResultadoGradoMensaje {
 
         String mensaje = "";
 
-        switch (grado) {
+        switch (grado.toUpperCase()) {
             case "A" :
                 mensaje = "¡Excelente Trabajo, su puntaje es mayor de 90";
                 break;
