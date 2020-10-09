@@ -1,5 +1,6 @@
 package sesion01.condicionales;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /*
@@ -18,14 +19,19 @@ public class CalculaSalarioConBono {
         System.out.println("¿Cuantas ventas hizo el empleado esta semana?");
         int numeroVentas = scanner.nextInt();
 
-        double sueldoTotal = sueldoFijo;
-
-        if (numeroVentas > cuota) {
-            sueldoTotal = sueldoTotal + bono;
-        }
+        double sueldoTotal = calcularSueldoTotal(numeroVentas);
 
         System.out.println("El pago del empleado es: " + sueldoTotal);
 
     }
+
+    public static double calcularSueldoTotal(int numVentas) {
+        if (numVentas>cuota){
+            return sueldoFijo + bono;
+        }else {
+            return sueldoFijo;
+        }
+    }
+
 
 }
