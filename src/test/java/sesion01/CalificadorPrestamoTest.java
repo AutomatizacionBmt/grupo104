@@ -2,6 +2,7 @@ package sesion01;
 
 import org.junit.Assert;
 import org.junit.Test;
+import sesion01.condicionales.CalificadorPrestamo;
 
 public class CalificadorPrestamoTest {
 

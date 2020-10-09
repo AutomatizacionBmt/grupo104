@@ -1,4 +1,4 @@
-package sesion01;
+package sesion01.condicionales;
 
 
 import java.util.Scanner;
