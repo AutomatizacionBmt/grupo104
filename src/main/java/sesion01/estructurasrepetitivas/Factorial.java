@@ -34,5 +34,12 @@ public class Factorial {
         }
 
         System.out.println("El factorial usando for es: " + factorial);
+
+        /* for(;;) {
+            System.out.println("es valido, es un bucle infinito");
+        } */
+
+
+
     }
 }
