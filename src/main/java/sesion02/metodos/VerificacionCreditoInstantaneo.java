@@ -46,6 +46,9 @@ public class VerificacionCreditoInstantaneo {
     }
 
     public static void notificaUsuario(boolean estaCalificado) {
+
+        String miExpresionTernaria = 3 > 2 ? "3 es mayor a 2" : "3 no es mayor a 2";
+        System.out.println(miExpresionTernaria);
         System.out.println(estaCalificado
                 ? "Felicidades!, has aprobado para el credito"
                 : "LO sentimos!, para otra oportunidad");
