@@ -22,12 +22,16 @@ public class VerificacionCreditoInstantaneo {
 
         System.out.println(estaCalificado ? "El usuario esta calificado" : "No esta calificado");
 
+        double salarioRequerido = 5000;
+        System.out.println(salarioRequerido);
+
         notificaUsuario(estaCalificado);
 
     }
 
     public static double obtenerSalario() {
         System.out.println("Ingresa su salario:");
+        System.out.println(salarioRequerido);
         return scanner.nextDouble();
     }
 
