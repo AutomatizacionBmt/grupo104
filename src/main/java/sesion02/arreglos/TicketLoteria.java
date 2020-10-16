@@ -1,6 +1,8 @@
 package sesion02.arreglos;
 
+import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 /*
 Crear una aplicación que genere un ticket de lotería  con 6 números aleatorios entre 1 – 69.
