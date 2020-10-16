@@ -42,4 +42,13 @@ public class Usuario {
     public void saludar() {
         System.out.println("Hola, " + this.nombre);
     }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "nombre='" + nombre + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                ", edad=" + edad +
+                '}';
+    }
 }
