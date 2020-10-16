@@ -33,6 +33,9 @@ public class Primitivos {
         System.out.println("Valor Minimo: " + Double.MIN_VALUE);
         System.out.println("Valor Maximo: " + Double.MAX_VALUE);
 
+        boolean miBoolean = false;
+        System.out.println("miBoolean = " + miBoolean);
+
         char miChar = 33; //'!','\u0021';
         System.out.println("miChar = " + miChar);
 
