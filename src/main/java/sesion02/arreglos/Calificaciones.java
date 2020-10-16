@@ -13,6 +13,15 @@ public class Calificaciones {
     private static int calificaciones[];
 
     public static void main(String[] args) {
+        int enteros1[] = new int[3];
+        enteros1[0] = 3;
+        enteros1[1]=4;
+        enteros1[2] = 5;
+
+        int enteros[] = {3,4,5};
+        imprimirEnteros(enteros1);
+        imprimirEnteros(enteros);
+
         System.out.println("¿Cuantas calificaciones usted desea ingresar?");
         int numeroElementos = scanner.nextInt();
         calificaciones = new int[numeroElementos];
@@ -23,6 +32,13 @@ public class Calificaciones {
         System.out.println("Mayor Calificacion: " + obtenerMayorCalificacion());
         System.out.println("Menor Calificacion: " + obtenerMenorCalificacion());
 
+    }
+
+    private static void imprimirEnteros(int enteros[]) {
+        for(int entero : enteros) {
+            System.out.print(entero + " | ");
+        }
+        System.out.println();
     }
 
     public static void getCalificaciones() {
