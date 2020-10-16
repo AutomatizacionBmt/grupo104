@@ -1,5 +1,7 @@
 package sesion02.arreglos;
 
+import java.util.Random;
+
 /*
 Crear una aplicación que genere un ticket de lotería  con 6 números aleatorios entre 1 – 69.
 1 | 2 | 56 | 5 | 23 | 12 |
@@ -8,6 +10,41 @@ public class TicketLoteria {
 
     public static void main(String[] args) {
         generaNumerosEImprime();
+
+        loteria();
+    }
+
+    public static void loteria() {
+        Random random = new Random();
+        int[] tickets = new int[6];
+
+        String ticket = "";
+
+        for(int i = 0; i < 6; i++) {
+            int dato = random.nextInt(69) + 1;
+            tickets[i] = dato;
+            if (i == (tickets.length-1)) {
+                ticket = ticket + tickets[i];
+            } else {
+                ticket = ticket + tickets[i] + "|";
+            }
+        }
+
+        System.out.println(ticket);
+
+        // imprimirTickets(tickets);
+    }
+
+    public static void imprimirTickets(int[] tickets) {
+        String ticket = "";
+        for(int i = 0; i < tickets.length; i++) {
+            if (i == (tickets.length-1)) {
+                ticket = ticket + tickets[i];
+            } else {
+                ticket = ticket + tickets[i] + "|";
+            }
+        }
+        System.out.println(ticket);
     }
 
     public static void generaNumerosEImprime() {
