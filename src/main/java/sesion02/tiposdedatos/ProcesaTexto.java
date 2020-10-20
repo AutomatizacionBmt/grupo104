@@ -21,6 +21,8 @@ public class ProcesaTexto {
             System.out.println(palabra);
         }
 
+        System.out.println("test");
+
     }
 
     /*
