@@ -2,9 +2,13 @@ package sesion03.herencia;
 
 public class Persona {
 
-    private String nombre;
-    private int edad;
-    private String genero;
+    protected String nombre;
+    protected int edad;
+    protected String genero;
+
+    public Persona(String nombre) {
+        this.nombre = nombre;
+    }
 
     public Persona(String nombre, int edad) {
         this.nombre = nombre;
@@ -48,5 +52,9 @@ public class Persona {
                 ", edad=" + edad +
                 ", genero='" + genero + '\'' +
                 '}';
+    }
+
+    public final void saludar() {
+        System.out.println("Hola, " + nombre);
     }
 }
