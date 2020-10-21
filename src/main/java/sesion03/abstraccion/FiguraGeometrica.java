@@ -18,7 +18,7 @@ public abstract class FiguraGeometrica {
 
     public abstract void dibujar();
 
-    public abstract void calcularArea();
+    public abstract double calcularArea();
 
     @Override
     public String toString() {
