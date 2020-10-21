@@ -7,16 +7,22 @@ public class Zoologico {
         Animal animal = new Gato("Michifu"); // polimorfismo
 
         gemir(animal);
-        ((Gato) animal).rasguniar();
+        //((Gato) animal).rasguniar();// Casteando para poder acceder a los metodos propios de la clase Gato
 
         Animal animal2 = new Perro("Firulais");
 
         gemir(animal2);
 
-        ((Perro) animal2).buscar();
+        //((Perro) animal2).buscar();// Casteando para poder acceder a los metodos propios de la clase Perro
     }
 
     public static void gemir(Animal animal) {
+        if(animal instanceof Gato) {
+            ((Gato) animal).rasguniar();
+        } else if(animal instanceof Perro) {
+            ((Perro) animal).buscar();
+        }
+
         animal.gemido();
     }
 }
