@@ -1,5 +1,7 @@
 package sesion03.polimorfismo;
 
+import sesion03.abstraccion.Rectangulo;
+
 public class Zoologico {
 
     public static void main(String[] args) {
@@ -8,6 +10,8 @@ public class Zoologico {
 
         gemir(animal);
         //((Gato) animal).rasguniar();// Casteando para poder acceder a los metodos propios de la clase Gato
+
+        ((Gato) animal).rasguniar();
 
         Animal animal2 = new Perro("Firulais");
 
