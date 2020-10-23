@@ -16,6 +16,11 @@ public class Cliente {
         libro.ejecutarSaludo();
         System.out.println("Codigo de barras: " + libro.getCodigoBarras());
 
+        Producto producto2 = new Libro2();
+        producto2.setPrecio(80);
+
+        System.out.println(producto2);
+
         System.out.println(libro);
     }
 }
