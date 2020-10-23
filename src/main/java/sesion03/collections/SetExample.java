@@ -8,11 +8,21 @@ import java.util.TreeSet;
 public class SetExample {
 
     public static void main(String[] args) {
-        calculatedTime();
+        // calculatedTime();
+        setDemo();
     }
 
     private static void setDemo() {
+        Set<String> frutas = new HashSet<>();
+        frutas.add("manzana");// add -> agrega un elemento a la coleccion
+        frutas.add("limon");
+        frutas.add("platano");
+        frutas.add("naranja");
+        frutas.add("limon");
+        frutas.add("pera");
 
+        System.out.println(frutas.size());//devuelve el tamaño de la coleccion
+        System.out.println(frutas);
     }
 
     private static void calculatedTime() {
