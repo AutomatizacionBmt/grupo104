@@ -40,6 +40,30 @@ public class Libro implements Producto {
         this.color = color;
     }
 
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public int getPaginas() {
+        return paginas;
+    }
+
+    public void setPaginas(int paginas) {
+        this.paginas = paginas;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Libro{");
