@@ -13,8 +13,14 @@ public class QueueExample {
         frutas.add("platano");
         frutas.add("naranja");
         frutas.add("limon");
-        frutas.add("pera");
 
         System.out.println(frutas.size());
+        System.out.println(frutas);
+
+        /*System.out.println("remove: " + frutas.remove());
+        System.out.println(frutas);*/
+
+        System.out.println("peek: " + frutas.peek());
+        System.out.println(frutas);
     }
 }
