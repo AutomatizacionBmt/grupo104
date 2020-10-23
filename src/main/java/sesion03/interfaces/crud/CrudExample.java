@@ -3,9 +3,10 @@ package sesion03.interfaces.crud;
 public class CrudExample {
 
     public static void main(String[] args) {
-        AccesoDatos accesoDatos = new MySqlDataBase();
+        AccesoDatos accesoDatos = new MySqlDataBase();//MySqlDataBase
         System.out.println("**************** MYSQL ****************");
         operacionesBasicasBaseDatos(accesoDatos);
+        operacionesLogging((Logger) accesoDatos);
         System.out.println("**************** Oracle ****************");
         accesoDatos = new OracleDataBase();
         operacionesBasicasBaseDatos(accesoDatos);
@@ -19,5 +20,10 @@ public class CrudExample {
         accesoDatos.listar();
         accesoDatos.actualizar();
         accesoDatos.eliminar();
+    }
+
+    private static void operacionesLogging(Logger logger) {
+        logger.info();
+        logger.error();
     }
 }

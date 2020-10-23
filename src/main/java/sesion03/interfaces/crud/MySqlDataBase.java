@@ -1,6 +1,6 @@
 package sesion03.interfaces.crud;
 
-public class MySqlDataBase implements AccesoDatos {
+public class MySqlDataBase implements AccesoDatos, Logger {
     @Override
     public void insertar() {
         System.out.println("Insertar desde Mysql");
@@ -19,5 +19,15 @@ public class MySqlDataBase implements AccesoDatos {
     @Override
     public void eliminar() {
         System.out.println("Eliminar desde Mysql");
+    }
+
+    @Override
+    public void info() {
+        System.out.println("**************** MYSQL INFO *****************");
+    }
+
+    @Override
+    public void error() {
+        System.out.println("**************** MYSQL ERROR *****************");
     }
 }
