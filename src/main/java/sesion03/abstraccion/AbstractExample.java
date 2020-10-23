@@ -2,6 +2,7 @@ package sesion03.abstraccion;
 
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Function;
 
 public class AbstractExample {
 
@@ -45,12 +46,21 @@ public class AbstractExample {
         System.out.println("El area de todos los rectangulos es: " + areaRectangulo); //60
         System.out.println("El area de todos los triangulos es: " + areaTriangulo); // 116
 
+        Function<FiguraGeometrica, Integer> miFunction = figura -> figura.tipoFigura.length();
+
         // Java 8 existen otras formas de reccorer una coleccion
         Arrays.stream(figuras)
                 .filter(figura -> figura instanceof Triangulo)
-                .map(figura -> {
-                    return figura.tipoFigura.length();
-                }).forEach(longitud -> System.out.println("La longitud es: " + longitud));
+                .map(miFunction)
+                .forEach(longitud -> System.out.println("La longitud es: " + longitud));
                 //.forEach(figura -> System.out.println(figura));
+
+        AtomicInteger cont = new AtomicInteger(0);
+        Arrays.stream(figuras)
+        .forEach(p -> {
+            cont.incrementAndGet();
+        });
+
+        System.out.println("contador: " + cont);
     }
 }

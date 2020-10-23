@@ -17,9 +17,9 @@ public class Empleado extends Persona {
         this.cargo = cargo;
     }
 
-    public String getNombre() {
+    /*public String getNombre() {
         return "123 " + super.getNombre();
-    }
+    }*/
 
     public String getIdEmpleado() {
         return idEmpleado;
@@ -40,7 +40,7 @@ public class Empleado extends Persona {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Empleado{");
-        sb.append("nombre='").append(super.getNombre()).append('\'');
+        sb.append("nombre='").append(this.getNombre()).append('\'');
         sb.append("edad='").append(getEdad()).append('\'');
         sb.append("genero='").append(getGenero()).append('\'');
         sb.append("idEmpleado='").append(idEmpleado).append('\'');
