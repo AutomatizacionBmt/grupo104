@@ -76,4 +76,9 @@ public class Libro implements Producto {
         sb.append('}');
         return sb.toString();
     }
+
+    @Override
+    public void ejecutarSaludo() {
+        System.out.println("Hola estoy aplicando herencia de interfaces");
+    }
 }

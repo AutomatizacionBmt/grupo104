@@ -13,6 +13,9 @@ public class Cliente {
         ((Libro) libro).setPaginas(50);
         ((Libro) libro).setIsbn("123456");
 
+        libro.ejecutarSaludo();
+        System.out.println("Codigo de barras: " + libro.getCodigoBarras());
+
         System.out.println(libro);
     }
 }

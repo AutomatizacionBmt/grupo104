@@ -1,6 +1,6 @@
 package sesion03.interfaces;
 
-public interface Producto {
+public interface Producto extends Producto2 {
 
     String NOMBRE_DEFAULT = "Producto default";
 
