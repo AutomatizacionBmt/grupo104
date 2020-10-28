@@ -1,6 +1,7 @@
 package sesion04.colecciones;
 
 import java.util.Map;
+import java.util.function.BiConsumer;
 
 /*
 A unos estudiantes se les dió un examen sorpresa, y colectivamente no lo hicieron tan bien. Como resultado, el Profesor
@@ -14,6 +15,9 @@ Imprime las calificaciones finales.
 public class Examen {
 
     public static void main(String[] args) {
+
+        Examen exa = new Examen();
+
         Map<String, Double> primerExamenMap = Calificacion.obtenerResultadosPrimeraCalificacion();
         Map<String, Double> examenRecuperacionMap = Calificacion.obtenerResultadosSegundaCalificacion();
 
@@ -26,7 +30,18 @@ public class Examen {
             }
         }
 
-        System.out.println("Calificaciones finales: ");
+        System.out.println("Calificaciones finales 1era forma: ");
         primerExamenMap.forEach((key, value) -> System.out.println("Estudiante: " + key + "; Calificacion: " + value));
+
+        System.out.println("Calificaciones finales 2da forma: ");
+        BiConsumer<String, Double> biConsumer = exa::imprimirNotas;//Metodos referencia
+        //BiConsumer<String, Double> biConsumer = Examen::imprimirNotas;//Metodos referencia
+        // BiConsumer<String, Double> biConsumer = (key, value) -> System.out.println("Estudiante: " + key + "; Calificacion: " + value);
+        primerExamenMap.forEach(biConsumer);
+
+    }
+
+    private void imprimirNotas(String key, Double value) {
+        System.out.println("Estudiante: " + key + "; Calificacion: " + value);
     }
 }
