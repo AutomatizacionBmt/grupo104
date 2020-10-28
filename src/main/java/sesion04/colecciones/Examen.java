@@ -14,6 +14,19 @@ Imprime las calificaciones finales.
 public class Examen {
 
     public static void main(String[] args) {
-        Map<String, Double> primerExamenMap =
+        Map<String, Double> primerExamenMap = Calificacion.obtenerResultadosPrimeraCalificacion();
+        Map<String, Double> examenRecuperacionMap = Calificacion.obtenerResultadosSegundaCalificacion();
+
+        for (Map.Entry<String, Double> calificacion : examenRecuperacionMap.entrySet()) {
+            Double notaPrimerExamen = primerExamenMap.get(calificacion.getKey());
+            Double notaExamenRecuperacion = calificacion.getValue();
+
+            if (notaExamenRecuperacion > notaPrimerExamen) {
+                primerExamenMap.put(calificacion.getKey(), notaExamenRecuperacion);
+            }
+        }
+
+        System.out.println("Calificaciones finales: ");
+        primerExamenMap.forEach((key, value) -> System.out.println("Estudiante: " + key + "; Calificacion: " + value));
     }
 }
