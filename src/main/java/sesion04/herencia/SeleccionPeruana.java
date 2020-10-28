@@ -17,7 +17,11 @@ public class SeleccionPeruana {
         seleccionados.add(paoloGuerrero);
         seleccionados.add(masajista);
 
-        seleccionados.forEach(SeleccionPeruana::imprimirCaracteristicas);
+        for(SeleccionFutbol seleccionFutbol : seleccionados) {
+            imprimirCaracteristicas(seleccionFutbol);
+        }
+
+        // seleccionados.forEach(SeleccionPeruana::imprimirCaracteristicas);
     }
 
     private static void imprimirCaracteristicas(SeleccionFutbol seleccionFutbol) {
