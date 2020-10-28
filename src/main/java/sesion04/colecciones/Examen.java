@@ -21,6 +21,13 @@ public class Examen {
         Map<String, Double> primerExamenMap = Calificacion.obtenerResultadosPrimeraCalificacion();
         Map<String, Double> examenRecuperacionMap = Calificacion.obtenerResultadosSegundaCalificacion();
 
+        //try {
+            String[] nombres = {"Giancarlo", "Elvis"} ;
+            System.out.println("Nombre 3: " + nombres[3]);
+        /*} catch (ArrayIndexOutOfBoundsException exception) {
+            System.out.println("Por si acaso el indice esta fuera de lo permitido");
+        }*/
+
         for (Map.Entry<String, Double> calificacion : examenRecuperacionMap.entrySet()) {
             Double notaPrimerExamen = primerExamenMap.get(calificacion.getKey());
             Double notaExamenRecuperacion = calificacion.getValue();
@@ -34,9 +41,12 @@ public class Examen {
         primerExamenMap.forEach((key, value) -> System.out.println("Estudiante: " + key + "; Calificacion: " + value));
 
         System.out.println("Calificaciones finales 2da forma: ");
-        BiConsumer<String, Double> biConsumer = exa::imprimirNotas;//Metodos referencia
+        // BiConsumer<String, Double> biConsumer = exa::imprimirNotas;//Metodos referencia
         //BiConsumer<String, Double> biConsumer = Examen::imprimirNotas;//Metodos referencia
-        // BiConsumer<String, Double> biConsumer = (key, value) -> System.out.println("Estudiante: " + key + "; Calificacion: " + value);
+        BiConsumer<String, Double> biConsumer = (key, value) ->  {
+            System.out.println("HOLA");
+            System.out.println("Estudiante: " + key + "; Calificacion: " + value);
+        };
         primerExamenMap.forEach(biConsumer);
 
     }
